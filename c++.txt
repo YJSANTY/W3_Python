@@ -1,0 +1,574 @@
+#######################  BASICS  #####################
+int main () {
+  string firstName = "John ";
+  string lastName = "Doe";
+  string fullName = firstName.append(lastName);
+  cout << fullName;
+  return 0;
+}
+
+
+int main(){
+int day =9;
+switch(day){
+ case 1:
+ cout<<"Monday";
+ break;
+ case 2:
+ cout<<"tuesday";
+ break;
+ case 3:
+ cout<<"wednesday";
+ break;
+ case 4:
+ cout<<"thursday";
+ break;
+ default:
+ cout<<"friday";
+ }
+ return 0;
+ }
+ 
+ 
+ 
+ 
+ break;
+ continue;
+ 
+
+
+########################  PROGRAMS  #########################
+
+
+important snakes head and tail:-
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    string s;
+	    cin>>s;
+	    string sn;
+	    for(int i=0;i<n;i++)
+	    {
+	        if(s[i]!='.')
+	        {
+	            sn+=s[i];
+	        }
+	    }
+	    bool ans = true;
+	    if(sn.length() %2!=0){
+	      ans = false;
+	    }
+	     else{
+	         for(int i=0; i<sn.length(); i++)
+	         {
+	            if(i%2==0)
+	            {
+	                if(sn[i]=='T')
+	                  ans=false;
+	            }
+	            else
+	            {
+	                if(sn[i]=='H')
+	                 ans=false;
+	            }
+	         }
+	     }
+	     if(ans)
+	       cout<<"Valid"<<endl;
+	      else
+	        cout<<"Invalid"<<endl;
+	      
+	    
+	}
+	return 0;
+}
+ #take input as per wish and regulate those.
+
+
+for(int i=0;i<l-1;i++){
+	        if(arr[i+1]-arr[i]<=k){
+	            res+=1;
+	            i+=1;#####so impotant to skip 2 numbers
+	        }
+	    }
+
+
+##########################   SET  ########################
+
+set<datatype> setname;
+set<datatype, greater<datatype>> setname; is used for storing values in a set in descending order.
+
+// CPP program to demonstrate various functions of
+// Set in C++ STL
+#include <iostream>
+#include <iterator>
+#include <set>
+using namespace std;
+
+int main()
+{
+	// empty set container
+	set<int, greater<int> > s1;
+
+	// insert elements in random order
+	s1.insert(40);
+	s1.insert(30);
+	s1.insert(60);
+	s1.insert(20);
+	s1.insert(50);
+
+	// only one 50 will be added to the set
+	s1.insert(50);
+	s1.insert(10);
+
+	// printing set s1
+	set<int, greater<int> >::iterator itr;
+	cout << "\nThe set s1 is : \n";
+	for (itr = s1.begin(); itr != s1.end(); itr++) {
+
+######################### FLOAT PRECISION  #################
+
+  std::cout <<fixed<<setprecision(6) <<e << std::endl;
+		cout << *itr << " ";
+	}
+	cout << endl;
+
+	// assigning the elements from s1 to s2
+	set<int> s2(s1.begin(), s1.end());
+
+	// print all elements of the set s2
+	cout << "\nThe set s2 after assign from s1 is : \n";
+	for (itr = s2.begin(); itr != s2.end(); itr++) {
+		cout << *itr << " ";
+	}
+	cout << endl;
+
+	// remove all elements up to 30 in s2
+	cout << "\ns2 after removal of elements less than 30 "
+			":\n";
+	s2.erase(s2.begin(), s2.find(30));
+	for (itr = s2.begin(); itr != s2.end(); itr++) {
+		cout << *itr << " ";
+	}
+
+	// remove element with value 50 in s2
+	int num;
+	num = s2.erase(50);
+	cout << "\ns2.erase(50) : ";
+	cout << num << " removed\n";
+	for (itr = s2.begin(); itr != s2.end(); itr++) {
+		cout << *itr << " ";
+	}
+
+	cout << endl;
+
+	// lower bound and upper bound for set s1
+	cout << "s1.lower_bound(40) : \n"
+		<< *s1.lower_bound(40) << endl;
+	cout << "s1.upper_bound(40) : \n"
+		<< *s1.upper_bound(40) << endl;
+
+	// lower bound and upper bound for set s2
+	cout << "s2.lower_bound(40) :\n"
+		<< *s2.lower_bound(40) << endl;
+	cout << "s2.upper_bound(40) : \n"
+		<< *s2.upper_bound(40) << endl;
+
+	return 0;
+}
+
+
+s.find("abc")  =>s is a array gives "1" or "0"
+s.substr(initial_index,final_index)  => s is a string
+
+
+
+
+
+
+####################  PAIRS  ####################
+ // defining a pair
+    pair<int, char> PAIR1;
+  
+    // first part of the pair
+    PAIR1.first = 100;
+    // second part of the pair
+    PAIR1.second = 'G';
+  
+    cout << PAIR1.first << " ";
+    cout << PAIR1.second << endl;
+  
+#################  ITERATORS #####################
+
+int main()
+{
+    vector<int> ar = { 1, 2, 3, 4, 5 };
+      
+    // Declaring iterator to a vector
+    vector<int>::iterator ptr;
+      
+    // Displaying vector elements using begin() and end()
+    cout << "The vector elements are : ";
+    for (ptr = ar.begin(); ptr < ar.end(); ptr++)
+        cout << *ptr << " ";
+      
+    return 0;    
+}
+
+ans : 1 2 3 4 5 
+
+##################  VECTORS  ####################
+
+int main()
+{
+
+vector<int> g1;
+
+for(int i=0;i<b;i++){
+g1.push_back(i);
+}
+
+for(auto i=g1.begin();i!=g1.end();i++){
+cout<<*i<<" ";
+
+
+//getting input from console
+for (int i = 0; i < n; i++) {
+      cin >> g1[i] ;
+}
+        
+reverse(g1.begin(), g1.end());  // it also reverses the vector
+
+size()
+max_size()
+reverse()
+kal.at(i) - returns the ement in the vector at i
+kal.front()
+kal.back()
+push_back()
+pop_back()
+
+####################  LIST  ######################
+
+list<int> kal;
+list<int> kal{12,45,86};
+ 
+for(auto i:kal){
+cout<<i<<' ';
+
+list<int> iterator it;
+for(it = kal.begin();i<kal.end();++it){
+cout<<*it<<
+
+kal.insert(it,10);
+front()
+back()
+push_front()
+push_back()
+pop_front()
+pop_back()
+remove()removes all
+kal.reverse() // reverses the array
+emplace() list_1.emplace(position,element) is used to add element in the ith place of the container
+merge()  list_1.merge(list_2)
+sort()  list.sort()
+showlist(kal)
+
+####################  DEQUEUE ######################
+
+deque<int> kal;
+deque<int> iterator it;
+for(it =kal.begin();it!=kal.end();++it){
+cout<<'\t'<<*it;
+cout<<'\n';
+showdq(kal);
+kal.insert(it,10);
+
+
+kal.max_size();
+push_front()  kal.push_front(element);
+push_back()
+pop_front() kal.pop_front();
+pop_back()
+
+
+####################  QUEUE  #######################
+
+queue<int> kal;
+while(!kal.empty()){
+cout<<'\t'<<kal.front();
+	kal.pop()
+}
+kal.push(10);
+showq(kal);
+kal.pop();
+kal.siz();
+kal.front();
+kal.back();
+kal.push(ele);
+kal.pop(ele);
+kal.emplace(6);
+
+
+####################  PRIORITY_QUEUE  ##############
+
+priority_queue<int> kal;
+for(auto i: arr){
+cout<<i<<' ';
+}
+for(int i=0;i<n;i++){
+kal.push(arr[i]);
+}
+while(!kal.empty()){
+cout<<kal.top()<<endl;
+kal.pop();
+}
+
+empty() 
+size()
+top()
+push()
+pop()
+swap()
+emplace()
+
+####################  STACK  ######################
+
+stack<int> kal;
+kal.push(21);
+kal.pop();
+while(!kal.empty()){
+cout<<kal.top()<<endl;
+kal.pop();
+}
+
+top()
+pop()
+swap()
+push()
+emplace()
+
+for(int i =0;i<n;i++){
+int k;
+cin>>k;
+kal.push(k);
+}
+        
+while (!kal.empty()) {
+cout << kal.top();
+kal.pop();
+
+for(int i =0;i<10;i++){
+if(!kal.empty() && (s2[i]==kal.top()){
+kal.pop();
+}
+
+#####################  SET  #####################
+
+ascending order
+set<int> kal;
+
+descending order
+set<int,greater<int>> kal;
+
+for(auto i: kal){
+cout<<i<<' ';
+}
+set<int,greater<int>> ::iterator itr;
+
+for(itr = kal.begin(),itr!=kal.end();itr++){
+cout<<*itr<<" ";
+}
+
+##assiging the same to another set<int> s2(s1.begin(),s1.end());
+##s2.erase(s2.begin(), s2.find(30));
+
+cout<<"kal.lower_bound(40):"<<*kal.lower_bound(40)<<endl; returns the first leemnt of 40 in the set
+cout<<"kal.upper_bound(40):"<<*kal.upper_bound(40)<<endl;
+
+kal.find(element);
+kal.count(element); //returns true or false;
+
+####################  MULTISET  ###################
+
+multiset<int,greater<int>> kal;
+for(auto i: kal){
+cout<<i<<' ';
+}
+set<int,greater<int>> ::iterator itr;
+
+for(itr = kal.begin(),itr!=kal.end();itr++){
+cout<<*itr<<" ";
+}
+
+##assiging the same to another set<int> s2(s1.begin(),s1.end());
+##s2.erase(s2.begin(), s2.find(30));
+
+cout<<"kal.lower_bound(40):"<<*kal.lower_bound(40)<<endl; returns the first leemnt of 40 in the set
+cout<<"kal.upper_bound(40):"<<*kal.upper_bound(40)<<endl;
+
+kal.find(element);
+kal.count(element); //returns true or false;
+
+##assiging the same to another set<int> s2(s1.begin(),s1.end());
+##s2.erase(s2.begin(), s2.find(30));
+
+cout<<"kal.lower_bound(40):"<<*kal.lower_bound(40)<<endl; returns the first leemnt of 40 in the set
+cout<<"kal.upper_bound(40):"<<*kal.upper_bound(40)<<endl;
+
+kal.find(element);
+kal.count(element); //returns true or false;
+
+####################  MAP  ########################
+
+map<string,int> kal;
+map<int,int> iterator::it = map.begin();
+while(it != kal.end()){
+it->first;
+it->second;
+++it;
+}
+for(itr = kal.begin(),itr!=kal.end();itr++){
+ cout << '\t' << itr->first << '\t' << itr->second
+             << '\n';
+}
+
+// assigning the elements from kal1 to kal2
+map<int, int> kal2(kal1.begin(), kal1.end());
+kal.insert(pair<int, int>(4, 50));
+kal.insert(pair<int, int>(5, 10));
+ 
+insert()
+count()
+find()
+size()
+
+
+
+#include <iostream>
+using namespace std;
+int main(){
+int x,n,test;
+cin>>test;
+while(test--){
+map<int,int> airlpane;
+cin>>n;
+for(int i=0;i<n*2;i++){
+int curval;
+cin >>currval;
+airplane[currval]++;
+}
+int max_runs=-1
+for(auto i:airplane){
+cout<<i.first<<i.second;
+}
+################  UNORDER_MAP #####################
+
+multimap<int,int> kal;
+multimap<int, int>::iterator itr;
+kal.insert(pair<int, int>(4, 50));
+kal.insert(pair<int, int>(5, 10));
+while(it != kal.end()){
+it->first;
+it->second;
+++it;
+}
+for(itr = kal.begin(),itr!=kal.end();itr++){
+ cout << '\t' << itr->first << '\t' << itr->second
+             << '\n';
+}
+
+// assigning the elements from kal1 to kal2
+map<int, int> kal2(kal1.begin(), kal1.end());
+
+####################  HEAP  #######################
+
+vector<int> kal ={10,20,30,40,50};
+make_heap(kal.begin(),kal.end());
+push_heap(kal.begin(),kal.end());
+pop_heap(kal.begin(),kal.end());
+sort_heap(kal.begin(),kal.end());
+is_heap(kal.begin(),kal.end());
+
+
+####################  FUNCTIONS  ##################
+
+// find the smallest possible integer value >= 15.08   
+  cout << ceil(15.08);
+
+  return 0;
+}
+
+// Output: 16
+
+ c = count(b.begin(), b.end(), '0');
+
+trunc() function rounds x towards zero and returns the nearest integral value that is not larger in magnitude than x. Simply, the trunc() function truncate the value after decimal and returns the integer part only.
+
+The floor in C++ is an inbuilt function that returns an integer value that is less than or equal to the argument. For example, the function floor(3.78) will return the integer value of 3 as an output. 
+
+int &min = *min_element(arr,arr+n );
+
+string r = s1.substr(3, 2);
+
+find substr 
+
+find element	
+
+sorting is neccesary before it
+binary_search(a,a+n,element)
+
+sort(a.begin(),a.end())
+
+swap(kal[i],kal[n-1])
+
+
+##################### STACK & ALL EG #################
+
+for getting input from the console and storing it and printing it
+
+for (int i = 0; i < s1.length(); i++) 
+{
+int k;
+cin>>k;
+kal.push(k);  // here instead of push in stack we can use the inserting func for the data container we are using
+}
+
+for(auto i: kal){
+cout<<i;   // in here the i the element in the data container itself
+}
+
+
+while (!kal.empty()) {
+cout << kal.top();
+kal.pop();
+
+#################### digit to int ####################
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int t; cin>>t; 
+while(t--){
+    int sum=0;
+    string s; cin>>s;
+   
+    for(int i=0;i<s.length();i++){
+        if(isdigit(s[i])){
+           int x=s[i]- '0';// converts digit to integer or we can do by subtracting the ascii value
+            sum+=x;
+        }
+    }
+    
+   
+    cout<<sum<<endl;
+}
+return 0;
+}

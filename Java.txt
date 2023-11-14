@@ -1,0 +1,581 @@
+Public class main{
+public static void main(String[] args){
+System.out.println("hello world");
+}
+}
+
+
+Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
+It is one of the most popular programming language in the world
+It has a large demand in the current job market
+It is easy to learn and simple to use
+It is open-source and free
+It is secure, fast and powerful
+
+
+public class main{
+public static void main(Strign[] args){
+System.out.println(3+3);
+}
+}
+
+// single line comment
+
+/*double line
+comment is here*/
+
+type variable = value;
+
+int kal =25;
+system.out.println(kal);
+
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+
+byte	1 byte	Stores whole numbers from -128 to 127
+short	2 bytes	Stores whole numbers from -32,768 to 32,767
+int	4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	1 bit	Stores true or false values
+char	2 bytes	Stores a single character/letter or ASCII values
+
+Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.
+
+Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.
+
+The float and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles:
+
+float myNum = 5.75f;
+System.out.println(myNum);
+
+boolean isJava = true;
+System.out.prinltn(isJava);
+
+char grade ='b';
+System.out.println(grade);
+
+Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:
+
+Example
+har myVar1 = 65, myVar2 = 66, myVar3 = 67;
+System.out.println(myVar1);
+System.out.println(myVar2);
+System.out.println(myVar3);
+it prints the ASCII values
+
+
+Example of primitive types are int bool float double ets.
+Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc.
+
+Java Type Casting
+Type casting is when you assign a value of one primitive data type to another type.
+Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+
+double myDouble = 9.78d;
+int myInt = (int) myDouble; // Manual casting: double to int
+
+System.out.println(myDouble);   // Outputs 9.78
+System.out.println(myInt);      // Outputs 9
+
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+\n - next line
+\t - tab
+\b - backspace
+\f - form feed
+
+math.max(x.y);
+math.min(x,y);
+math.sqrt(x,y);
+math.abs(-4.5);
+int random_num = (int)(math.random()*101); 0 to 100
+
+int myAge = 25;
+int votingAge = 18;
+System.out.println(myAge >= votingAge); // prints true
+
+ternary operator // variable = (condition) ? expressionTrue :  expressionFalse;
+
+switch is same as cpp
+while is same as cpp
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+continue and break is same as cpp
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Open1";
+System.out.println(cars[0]);
+System.out.println(cars.length());
+
+for (String i : cars) {
+  System.out.println(i);
+}
+
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+System.out.println(myNumbers[1][2]); // Outputs 7
+
+static means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.
+void means that this method does not have a return value
+
+public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+
+public class Main {
+  static int myMethod(int x) {
+    return 5 + x;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(myMethod(3));
+  }
+}
+// Outputs 8 (5 + 3)
+
+method overloading is same as cpp
+
+recursion:
+
+Use recursion to add all of the numbers between 5 to 10.
+
+public class Main {
+  public static void main(String[] args) {
+    int result = sum(5, 10);
+    System.out.println(result);
+  }
+  public static int sum(int start, int end) {
+    if (end > start) {
+      return end + sum(start, end - 1);
+    } else {
+      return end;
+    }
+  }
+}
+
+OOPS:
+
+public class Main{
+int x=5;
+}
+
+public static void main(String [] args){
+Main obj = new Main();
+System.out.println(obj.x);
+}
+
+public class Main {
+  final int x = 10;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 25; // will generate an error: cannot assign a value to a final variable
+    System.out.println(myObj.x);
+  }
+}
+
+
+
+You will often see Java programs that have either static or public attributes and methods.
+
+In the example above, we created a static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:
+
+Example
+public class Main {
+  // Static method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+
+  // Public method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+  // Main method
+  public static void main(String[] args) {
+    myStaticMethod(); // Call the static method
+    // myPublicMethod(); This would compile an error
+
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method on the object
+  }
+}
+
+constructors
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+For attributes, methods and constructors, you can use the one of the following:
+
+Modifier	Description	Try it
+public	The code is accessible for all classes	
+private	The code is only accessible within the declared class	
+default	The code is only accessible in the same package. This is used when you don't specify a modifier. You will learn more about packages in the Packages chapter	
+protected	The code is accessible in the same package and subclasses. You will learn more about subclasses and superclasses in the Inheritance chapter
+
+
+For classes, you can use either final or abstract:
+
+Modifier	Description	Try it
+final	The class cannot be inherited by other classes (You will learn more about inheritance in the Inheritance chapter)	
+abstract	The class cannot be used to create objects (To access an abstract class, it must be inherited from another class. You will learn more about inheritance and abstraction in the Inheritance and Abstraction chapters)
+
+For attributes and methods, you can use the one of the following:
+
+Modifier	Description
+final	Attributes and methods cannot be overridden/modified
+static	Attributes and methods belongs to the class, rather than an object
+abstract	Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();. The body is provided by the subclass (inherited from). You will learn more about inheritance and abstraction in the Inheritance and Abstraction chapters
+transient	Attributes and methods are skipped when serializing the object containing them
+synchronized	Methods can only be accessed by one thread at a time
+volatile	The value of an attribute is not cached thread-locally, and is always read from the "main memory"
+
+Abstract:
+An abstract method belongs to an abstract class, and it does not have a body. The body is provided by the subclass:
+
+abstract class Main(){
+public String name ="john";
+public int age =24;
+public abstract void study();
+}
+
+class Student extedns Main{
+public int graduationYear =2018;
+public void study(){
+System.out.println("studying all day along");
+}
+}
+
+class second{
+public static void main(String[] args){
+Student obj = new student();
+System.out.println("Name:" + obj.name);
+System.out.println("Age :" + myobj.age);
+obj.study();
+}
+
+Encapsulation:
+public class Person {
+  private String name; // private = restricted access
+
+  // Getter
+  public String getName() {
+    return name;
+  }
+
+  // Setter
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.name = "John";  // error
+    System.out.println(myObj.name); // error 
+  }
+}
+
+In the example above, java.util is a package, while Scanner is a class of the java.util package.
+
+To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. In our example, we will use the nextLine() method, which is used to read a complete line:
+
+import java.util.Scanner;
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine();
+    System.out.println("Username is: " + userName);
+  }
+}
+
+if you try to extend from a final class then it throws error
+
+Ineer class:
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+// Outputs 15 (5 + 10)
+An inner class can also be static, which means that you can access it without creating an object of the outer class:
+just like static attributes and methods, a static inner class does not have access to members of the outer class.
+
+Abstract class and inheritance:
+
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+The abstract keyword is a non-access modifier, used for classes and methods:
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+An abstract class can have both abstract and regular methods:
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+Inheritance:
+
+Another way to achieve abstraction in Java, is with interfaces.
+
+An interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class:
+
+// Interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    // The body of sleep() is provided here
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+To implement multiple interfaces, separate them with a comma:
+class DemoClass implements FirstInterface, SecondInterface 
+
+ENUM:
+
+An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+
+To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
+
+public class Main {
+  enum Level {
+    LOW,
+    MEDIUM,
+    HIGH
+  }
+
+  public static void main(String[] args) {
+    Level myVar = Level.MEDIUM; 
+    System.out.println(myVar);
+  }
+}
+
+for (Level myVar : Level.values()) {
+  System.out.println(myVar);
+}
+
+reading type has to be mentioned in java:
+In the example above, we used the nextLine() method, which is used to read Strings. To read other types, look at the table below:
+
+Method	Description
+nextBoolean()	Reads a boolean value from the user
+nextByte()	Reads a byte value from the user
+nextDouble()	Reads a double value from the user
+nextFloat()	Reads a float value from the user
+nextInt()	Reads a int value from the user
+nextLine()	Reads a String value from the user
+nextLong()	Reads a long value from the user
+nextShort()	Reads a short value from the user
+If you enter wrong input (e.g. text in a numerical input), you will get an exception/error message (like "InputMismatchException").
+
+Time/Date:
+LocalDate myObj = LocalDate.now(); // Create a date object
+LocalTime myObj = LocalTime.now();
+LocalDateTime myObj = LocalDateTime.now();
+differenet time patterns are avavilable
+
+ArrayList:
+The ArrayList class is a resizable array, which can be found in the java.util package.
+
+The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different:
+
+ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+Collections.sort(cars);  // Sort cars
+
+LinkedList:
+When To Use
+Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.
+    LinkedList<String> cars = new LinkedList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+addFirst()	Adds an item to the beginning of the list.	
+addLast()	Add an item to the end of the list	
+removeFirst()	Remove an item from the beginning of the list.	
+removeLast()	Remove an item from the end of the list	
+getFirst()	Get the item at the beginning of the list	
+getLast()	Get the item at the end of the list	
+
+HashMap:
+In the ArrayList chapter, you learned that Arrays store items as an ordered collection, and you have to access them with an index number (int type). A HashMap however, store items in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
+
+One object is used as a key (index) to another object (value). It can store different types: String keys and Integer values, or the same type, like: String keys and String values:
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+public class Main {
+  public static void main(String[] args) {
+    // Create a HashMap object called capitalCities
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+    // Add keys and values (Country, City)
+    capitalCities.put("England", "London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway", "Oslo");
+    capitalCities.put("USA", "Washington DC");
+    System.out.println(capitalCities);
+  }
+}
+capitalCities.get("England");
+capitalCities.remove("England");
+capitalCities.size();
+for (String i : capitalCities.keySet()) {
+  System.out.println(i);
+}
+
+hashset:
+HashSet<String> cars = new HashSet<String>();
+public class Main {
+  public static void main(String[] args) {
+    HashSet<String> cars = new HashSet<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("BMW");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+cars.contains("Mazda");
+cars.size();
+for (String i : cars) {
+  System.out.println(i);
+}
+
+Iterator:
+Iterator<String> it = cars.iterator();
+while(it.hasNext()) {
+  System.out.println(it.next());
+}
+
+Wrapper class // yet to study
+
+Try- Catch:
+public class Main {
+  public static void main(String[] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");
+    }
+  }
+}
+
+The throw statement allows you to create a custom error.
+
+The throw statement is used together with an exception type. There are many exception types available in Java: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc:
+public class Main {
+  static void checkAge(int age) {
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+Regular Expression // yet to study
+
+thread // yet to study
+
+lambda expression:
+(parameter1, parameter2) -> expression
+

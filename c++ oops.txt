@@ -1,0 +1,425 @@
+#################  POINTER  ###############
+int *int_ptr;
+double* double_ptr;
+char *char_ptr;
+string *string_ptr;
+vector<int> *ptr;
+
+int *int_1 =nullptr; - garbage value points nowhere
+int *int_2=10 - points to the 10 space in the memory
+
+num - variable
+int num =10;
+num - 10
+size(num) - 4 bytes
+&num - address
+
+int *ptr;
+p - garbage
+&p - address
+size(p) - 4 bytes
+p = nullptr;
+p - 0
+
+there is a difference between pointer size and the size of which pointer points
+
+int score=10;
+int *score_ptr=nullptr;
+score_ptr = &score;//pointer make sures it points to the valid data type
+
+dereferencing the pointer - access the data we are pointing to:
+int score = 100;
+int *scr_ptr = &score;
+*scr_ptr = 200;
+*scr_ptr - 200
+score - 200
+#score variable addres is stored in scr_ptr variable
+# accessing the address in scr_ptr by *scr_ptr gives value in the address -> value in score variable
+
+string name ="frank";
+strign *str_ptr = &name;
+name = "james";
+*str_ptr- james
+
+vector<string> stooges{"larry","moe","curly"};
+vector<string> *stg = & stooges;
+*stg.at(0) - larry
+*stg.at(1) - moe
+
+dynamic memory allocation:
+int *int_ptr = new int; // allocate an integer on the heap
+int_ptr - address of int 
+*int_ptr - garbage value
+*int_ptr = 100
+*int_ptr - 100
+these dynamic pointer dont delte themselves thus we have to step in and delte it
+delete int_ptr;
+  
+accessing array using dynamic creation and pointer
+int *ptr_array=null_ptr;
+int size[];
+
+array_ptr = new int{size};//allocate array on heap;
+ 
+int scores[] = {100,200,300};
+scores - 1st element in array
+*scores - 100 
+int *score_ptr = {score};
+score_ptr - 1st element address in array
+*score_ptr - 100
+score_ptr[0] - 100//it is able to access the array without '*' becoz it refers the first element 
+score_ptr[1] - 200
+score_ptr[2] - 300
+score_ptr[1] is same as (score_ptr+1)
+
+subscript notation:
+array_name[index] or pointer_name[index]
+offset notation:
+*(array_name + index) or *(pointer + index)
+
+int_ptr++ - increments a pointer to the next point to the next array element
+int_ptr-- - decrements a pointer to point to the previous array element
+ 
+strign s1 = "frank";
+string s2 = "frank";
+
+string *p1 = &s1;
+string *p2 = &s2;
+
+*p1 == *p2 - true
+
+const int *score_ptr= &high score;
+*score_ptr = 86; - error
+score_ptr = &low_score - ok
+
+cosnt int *const score_ptr = &high_score;
+*score_ptr = 86; - error
+score_ptr = &low_score - error
+
+uninitiallized pointer
+int *int_ptr;//pointhing anywhere
+*int_ptr = 100 //hopefully crash
+dangling pointer - these are pointers pointing to invalid data memory
+
+dereferncing a null pointer will cause your progrma to crash
+memory leak -forgetting to release memory with delete
+
+#Referencing
+&variable - is a reference
+An alias for a variable
+Must be initiated to a variable while declaring 
+
+#r value and l value
+y =100 - rvalue 100 assigned to l-value y
+x= x+y - rvalue (x+y) assigned to l value x
+int &ref1 =x;- ref1 is reference to l value
+int &ref2 =100; - error 100 is an rvalue
+
+####################### OOPS ######################
+
+objectts are linke user defined variables with class as datatype and name as object account gef;
+
+class Class_name{
+//attributes
+int health;
+//methods
+void talk(string text_to_print){
+cout<<text_to_print;
+};
+
+talk frank;
+talk jim;
+talk *mary_talk = new talk(); // pointer for the object
+creates address for talk in mary_talk and *mary_talk represetns the first address in the object
+
+delete mary_talk;
+//once object is created we can use it like any other varaible like
+talk talking_1[]={"frank","jim"}; // this arrays stores talk objects 
+vector<talk> talking_2;
+talking_2.push_back("frank");
+talking_2.push_back("jim");
+
+//we can access the class using two ways:dot operator.
+for pointer towards object we have can handle it in two ways:
+(*frank_account).balance = 0;
+(*frank_account).deposit = 0;
+frank_account->balance = 0;
+frank_account->deopsit = 0;
+
+access modifier:
+public
+private
+protected
+//protected and private acts so similar untill it comes to inheritence
+
+class Account{
+ private;
+double balance;
+public:
+void set_balance(double bal){
+balance = bal;
+}
+double get_balance(){
+return balance;
+}
+};
+// implementation of the methods inside the class
+// accessing the private attributes using methods
+
+
+class Account{
+private:
+ double balance;
+public:
+void set_balance(double bal);
+double get_balance();
+};
+
+void account::set_balance(double bal){
+balance = bal;
+}
+void Account::get_balance(){
+return balance;
+}
+//declaration of the method outside the class
+//sometimes declaration and implementation can be in two different files //thus it cna be made using  #include "Account.h" double quotes in here is used for represetnion two different places of the implementation of user defined file
+
+to declare the class only once we use 
+
+Account .h file
+
+#ifdef _ACCOUNT_H_
+#define _ACCOUNT_H_
+class and methods declaration
+
+#endif
+
+//some compiler support #pragme once which does the same as of above but the thing is some comipler doesnt support
+
+Account.cpp
+
+#include"Account.h"
+//implementation of the methods
+
+main.cpp
+#include "Account.h"
+int main(){
+Account frank_account;
+frank_account.set_balance(1000.00);
+double bal = frnak_account.get_balance();
+
+std::cout<<bal<<<std::endl;
+return 0;
+}
+
+
+//Constructor and destructor
+class Player{
+private:
+string name;
+int health;
+public:
+Player()//operator overloading
+Player(string name);
+~Player(){
+cout<<"Destructor called for"<<name<<endl;
+//destructor no return type or parameters
+};
+
+//if we didnt provide any constructor nor destructor c++ will have inbuilt constructor and destructor which will be called but empty
+
+//destructor will be called automatically once the scope of the object ends
+
+{
+Player slayer;
+slayer.set_name("Slayer");
+cout<<"player name is"<<slayer.name;
+}
+
+o/p;-
+Player name is Slayer
+Destructor called for Slayer
+
+//when objects go out of scope they print in the reverse order which is the recently createdd object is destroyed first and goes on
+
+//for pointer objects we have to call the destructor like the pointer
+Player *enemy = new Player;
+enemy->set_name("Enemy");
+delete enemy;
+
+class Account
+{
+private:
+string name;
+double balance;
+public:
+Account(strign name_val,double bal){
+name = name_val;
+balance = bal;
+}
+};
+//as we have created a constructor for the class but with arguments the c++ isnt going to create a inbuilt constructor without arguments do when you create an object wothout parameters it is going to throw error
+Account frnak_account; // error
+Accoutn jim_account; // error
+
+Account*mary_account = new Account;//error
+
+Account bill_accoutn{"Bill",1500.0}//ok
+
+// initialization list
+previous version:
+Player::Player(){
+name="None";
+health=0;
+xp=0;
+}
+
+new_version:
+Player:player()
+:name="None",health=0,xp=0{
+//body of the method
+}
+
+//delegating constructors using one constructor inside another:
+Player::Player():Player{"None,0,0}{
+cout<<"NO-arg constructor"<<endl;
+}
+
+Player::Player(string name_val)
+: Player{name_val,0,0}{
+cout<<"One-arg-constructor"<<endl;
+}
+
+player:Player(string name_val,int health_val,int xp_val)
+:name{name_val},health{health_val},xp{xp_val}[
+cout<<"three-args cosntructor"<<endl;
+
+
+int main(){
+Player empty;
+Player frank{"frank"};
+Player villain{"Villain",100,55};
+retrun 0
+}
+
+o/p;-
+three args constructor
+no-arg constructor
+three-arg-cosntructor
+one-arg cosntructor
+three-arg cosntructor
+
+//default cosntructor parameters
+Player::Player(string name="jeff",int health =0,int xp =0 ){
+}
+
+
+//l-value and r-value reference
+
+int x = 100;
+void func(int &num);
+void func(int &&num);
+
+func(x);  // calls a , x is a l-value
+func(200); // calls b-200 is r-value
+
+//move constructor
+//instead of making a deep copy as the copy cosntructor does it simply moves the sources on the heap 
+Type::Type(Type &&source);
+Move::Move(Move &&source)
+: data{source.data}{
+source.data = nullptr;
+}
+//steal the data and then null out the source pointer
+
+//this keyword
+void Account::set_balance(double balance){
+this->balance = balance;
+}
+
+void Account::set_balance(double balance){
+balance = balance;
+}
+//both does the same
+
+//const object
+const Player Villain("Villain",100,10);
+Villain.set_name("Nice guy"); // error you cannot change the attributes of a cosntant object
+cout<<Villain.get_name()<<endl; // error becoz the compiler think it can have the abiltiy to change the value of the attribute
+// to change the situation we should declare the method is a constant in the beginninglike
+std::string get_name() const;
+
+//static methods has only access to static attributes either public or private or protected) and cant access other attributes
+static int kal;
+static int cal();
+
+//struct
+differnce b/w struct and class is that members of struct are public by default and members of classes are private by default
+
+struct Person{
+string name;
+string get_name();
+};
+Person p;
+p.name = 'frank"; // ok
+cout<<p.get_name(); // ok
+
+//friend in c++
+a function or class that has access to private class member and that function of or claa is not a member of the class it is accessing
+//friend is not symmentric is a A is a friend of B then B is Not a friend of A
+//Friend is not sttractive if A is a friend of B AND ,B is a friend of C then A is not a friend of C
+
+class Player{
+friend class other_class;
+//other_class class has access to player class even private attributes and methods
+
+};
+
+class Player{
+friend void other_class::display_player(Player &p);
+//other_class has access to player class even private attributes and methods
+};
+
+#################### Overloading operator ###################
+
+//using functions:
+Number result = multiply(add(a,b),divide(c,d));
+using member methods:
+number result = (a.add(b)).multiply(c.divide(d));
+//using overloaded operators:
+number result = (a+b)*(c/d);
+ example:
+int a = b+c , string s1= s2+s3
+a = b, a == b
+
+
+#################### Inheritance #####################
+
+Related classes:
+Account 
+balance ,deposit,withdraw
+Savings account 
+balance ,deposit,withdraw,intrest.
+inheritance : process of creating new classes from exisitng classes
+base class - parent class  - super class
+derived class - child class - sub class
+
+generalization:combining siliar classes into a single ,more general class based on common attributes
+specialization:creating from existing classes proving more specialized attributes or operations
+
+Inheritance vs composition:
+inheritance "is-a" relationship
+composition "has-a" relatiosnhip
+
+class Person{
+private:
+string name; // has-a name
+Account account; // has-a account
+};
+
+We can use both composition and inheritance to build cpowerfull structure
+
+public class establishes a "is-a" relationship between derives and base classes
+private and protected 
+Establishes derived class "has-a" base class relationship
+

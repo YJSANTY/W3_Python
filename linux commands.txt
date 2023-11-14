@@ -1,0 +1,83 @@
+pwd - display the location of current working directory
+
+mkdir file_name - make new directory
+
+rmdir file_name - removes the directory
+
+ls - shows all the directory
+
+cd - change the current directory
+
+touch file_name , touch file_name1 file_name2 - creates empty files one or multiple
+
+cat file_name - multip purpose utility,it can be used to create a fle display content of the file,copy file to another
+
+rm file_name - removes the file
+
+cp file_name_present file_name_another - copies a file or directory  
+
+mv file_name directory_name - mv command is used to move a file or a directory form one location to another location.
+
+rename s/oldname/newname/'files - mv command is used to move a file or a directory form one location to another location. 
+
+head file_name - is used to display the content of a file. It displays the first 10 lines of a file.
+
+tail file_name - is similar to the head command. The difference between both commands is that it displays the last ten lines of the file content. It is useful for reading the error message.
+
+tac file_name - is the reverse of cat command, as its name specified. It displays the file content in reverse order (from the last line).
+
+more fiel_name - is quite similar to the cat command, as it is used to display the file content in the same way that the cat command does. The only difference between both commands is that, in case of larger files, the more command displays screenful output at a time.
+
+less file_name - is similar to the more command. It also includes some extra features such as 'adjustment in width and height of the terminal.' Comparatively, the more command cuts the output in the width of the terminal.
+
+su user_name - 
+provides administrative access to another user. In other words, it allows access of the Linux shell to another user.
+
+id - is used to display the user ID (UID) and group ID (GID).
+
+useradd user_name - is used to add or remove a user on a Linux server.
+
+passwd - is used to create and change the password for a user.
+
+groupadd - command is used to create a user group.
+
+cat file_name | cat or tac | cat ot tac - is also used as a filter. To filter a file, it is used inside pipes.
+
+command (file_name)| grep search_word - is the most powerful and used filter in a Linux system. The 'grep' stands for "global regular expression print." It is useful for searching the content from a file. Generally, it is used with the pipe.
+
+comm file_name1 file_name2 - is used to compare two files or streams. By default, it displays three columns, first displays non-matching items of the first file, second indicates the non-matching item of the second file, and the third column displays the matching items of both files.
+
+command | tr old new - is used to translate the file content like from lower case to upper case.
+
+sort file_name | uniq -  is used to form a sorted list in which every word will occur only once.
+
+wc file_name - is used to count the lines, words, and characters in a file.
+
+sort file_name - is used to sort files in alphabetical order.
+
+gzip file_name1 file_name2 file_name3 is used to truncate the file size. It is a compressing tool. It replaces the original file by the compressed file having '.gz' extension.
+
+find .-name "*.pdf" - is used to find a particular file within a directory. It also supports various options to find a file such as byname, by type, by date, and more.
+
+The following symbols are used after the find command:
+
+(.) : For current directory name
+
+(/) : For root
+
+locate file_name - is used to search a file by file name. It is quite similar to find command; the difference is that it is a background process. It searches the file in the database, whereas the find command searches in the file system. It is faster than the find command. To find the file with the locates command, keep your database updated.
+
+date - is used to display date, time, time zone, and more.
+
+cal - is used to display the current month's calendar with the current date highlighted.
+
+sleep time - is used to hold the terminal by the specified amount of time. By default, it takes time in seconds.
+
+zcat file_name - is used to display the compressed files.
+
+df is used to display the disk space used in the file system. It displays the output as in the number of used blocks, available blocks, and the mounted directory.
+
+exit - is used to exit from the current shell. It takes a parameter as a number and exits the shell with a return of status number.
+
+clear command is used to clear the terminal screen.
+

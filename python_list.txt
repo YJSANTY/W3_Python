@@ -1,0 +1,145 @@
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+  
+#This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+
+print(thislist[-4:-1])
+
+
+print(thislist[2:])
+#This example returns the items from the beginning to, but NOT including, "kiwi":
+
+
+print(thislist[:4])
+
+#changes the value of it
+thislist[1] = "blackcurrant"
+
+print(thislist)
+
+thislist[2:4] = ["black", "blue","red"]
+print (thislist)
+
+thislist.insert(3,"pineapple")
+print(thislist)
+
+thislist.append("white")
+print(thislist)
+
+#thislist.extend(list or tipule or other)
+
+thislist.pop(1)
+print(thislist)
+
+thislist.pop()
+#it deletes the last element
+
+#del thislist
+#deletes the entire list
+
+#thislist.clear
+#it clears the element in list
+
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+print(newlist)
+
+
+#to create a new list directly fromm the existing we have to use following syntac
+# syntax : newlist = [ x for in iterable condtion == True]
+newlist = [x for x in thislist if i =="a"]
+#newlist = [x.upper() for x in fruits if condition]
+
+thislist.sort(reverse = True)
+
+#case sensitive sorting causes unexpected result
+
+thislist.sort(key = str.lower)
+
+list = thislist.copy() or newlist = list(thislist)
+print(list)
+print(newlist)
+
+list3 =list1+ list2
+for i in lis1:
+	newlist.append(i)
+    
+list2.append(list1)
+
+
+#########################################
+
+y = "hello world"[::-1]
+print(y)
+# It prints in reverse order
+
+abs()-prints the modulus value
+
+strip()
+#it removes any spaces in the front and end
+
+x,y,z=input().split()
+it slpits the input values into x,y,z
+
+x,y,z = [int(i) for i input().split]
+it takes only the integer values and splits it.
+
+for i in x:
+here i should be string not integer else it wont be iteratable
+
+use*list to print only the elements and not the list
+
+use enumerate to access both index and value in list
+for i,v in enumerate(y):
+ 	print(i,v)
+	it prints index : value
+
+to inverse a list use list[::-1]
+
+x,y = [int(i) for i in input().split("/")]
+
+number= 7.361
+
+int and long are combined as one in python 3
+
+.isalpha() is used to check whether it contains only alphabets
+.isdigit() is used to check whether it contains only numberrs
+.isupper() is used to check whether it is in upper case
+.islower() is used to check whether it is in lower case
+
+%.2f ." % number - it prints value only upto 2 decimal places
+"{:.%nf}".format(number) it change the number into roundding format upto n decimal places 
+
+x = integer and string
+x[0::y]
+0 is the initial operator
+: : the space means that till the end
+y is the increment operator
+
+.swapcase() is used to change upper into lower and vice versa
+
+del(i) is used to remove elemrnt in index order while remove(element)
+removes the elemnt
+
+list.count(elelmetn) it gives the number of times it is there in it
+
+print(l[i], end='')
+
+numList = list(map(float, input("Enter the list numbers separated by space ").strip().split()))[:n]
+
+num_list = list(int(num) for num in input("Enter the list items separated by space ").strip().split())[:n]

@@ -1,0 +1,309 @@
+string:
+
+learn all string fucntions and comparisons
+
+strcpy() - copies the string
+memcopy() - copyies the particular bytes
+
+int a[2]={12,13};
+&a gives the address of the entire array and not the first character int he array
+
+ printf ( 8 + "Good Morning " ) ; pushes the memory by 8 
+
+Notice that you have not added the last character \0 in the char array.so its not a string
+
+If the two strings are identical, then strcmp() function returns?The strcmp return an int value that is if s1 < s2 returns a value < 0 if s1 == s2 returns 0 if s1 > s2 returns a value > 0
+
+return a pointer to the located character - strchar()
+
+strstr() finds the occurence of a given strign in another string
+
+For loop will terminates when condition returns 0
+
+while loop will execute if condition give non zero
+
+all loop types ocmpile at same speed
+
+A pointer that is not initialized properly before its first use is known as the wild pointer	
+
+No, it is not possible to do arithmetic addition operations on two pointers of the same data type.
+
+A near pointer is a pointer which is used to bit addresses of up to 16 bits in a given section of the computer memory that is 16 bit enabled
+
+exit - comes of the entire code
+
+break comes of the loop
+
+continue - skips the below code in the loop, it takes control of the beginning of the loop
+
+while(i--!=0) , in this the i value equals 0 therefore it doesnt enter the loop and after this line i decrements to -1
+
+    int n=10;
+    int i = printf("%d",n);
+    printf("%d",i);
+	
+    O/P;- 10 2
+
+the statement if(var); and if(var){} are equivalent.
+
+in swithc float and double are not supported
+
+continue and break cant be used in a if-else 
+
+in switch case ,default isnt mandatory and can be present anywhere in it
+
+in char str[] = {1,2,3,4,5,'\0'} 
+or char str[] = "12345" both saved as same like array
+
+in above the char_count= 5 but the size of the array is 6 
+
+The strcmp return an int value that is if s1 < s2 returns a value < 0 if s1 == s2 returns 0 if s1 > s2 returns a value > 0
+
+strstr() finds a string in another string (first)
+
+strchr() finds a char in a string (last)
+
+The prototype of strcoll() function is int strcoll(const char *s1,const char *s2).
+
+Numbers will be displayed until the signed limit of short and the program will successfully terminate
+
+while(TRUE) or while(true) does not work. true is not a keyword in C
+
+
+
+Here a variable a holds the value 130 of integer datatypes, which is then type casted to char datatypes using pointer variable. As we know that a value 130 is exceeding the char range( -128 to 127), thus it loops through its range.
+
+when a pointer points a garbage value then it throws run time error
+
+char array :
+
+char ptr[] = "hollo";
+char ptt[]={'h','o','l','l','o','\0'};
+
+//both saved as same
+
+in this &ptr - addres of ptr represents the entire array 
+if we increase the address value by one(&ptr++) then it increases the address next to the last element in the array an not the second element in the array
+
+
+in this %s wants a string thus you need to give a string or array
+Eg:
+printf("%s",ptr) // O/P hollo
+printf("%c",ptr) // O/P error
+
+if we want to acces the characters in the array we should declare as %c and it expects a character only 
+Eg:
+printf("%c",ptr[0]); // O/P h
+printf("%c",ptr); // O/P error
+
+Pointer variable:
+
+in this if we declare a pointer variable then it can be accesed the same as variable as above 
+Eg:
+char *ptr = "hello";
+
+exception as far as now:
+printf("%s",ptr) // O/P hollo // how does it print hollo when ptr is referenced and when it should be *ptr becoz ptr stores address of the value and how does it print the value in the address when does is referenced
+printf("%c",ptr) // O/P error
+
+printf("%c",ptr[0]); // O/P h
+printf("%c",ptr); // O/P error
+
+Logical:
+printf("%c",*ptr); // O/P h
+printf("%c",*(ptr+2)); // O/P l
+
+
+for(i = 0;s[i];i++)
+printf("%c", i[s]);
+ here i[s] = s[i]
+
+Array names are pointer constant and creating a new pointer and changing poisition using the new pointer throws error
+
+char i =0;
+for(;i>=0;i++); compiler executes this line until it becomes falls.
+As i belongs to char type, for loop will exit when i = -128; because it loops from 0 to -128.
+
+so char ranges form 0 to -128 as crosses 128 it starts from -128 which is less than 0 thus gets printed
+
+
+Simply s[i] represents s[0] = "d"
+*(s+i) represents *(s + 0) = "d"
+*(i+s) represents *s = "d"
+i[s] represents 0[s] = "d".
+Thus outputted d d d d
+
+char s[ ] = "d"; - it doesnt throws error becoz it think the given is a string but only we know we have a string with one letter
+
+
+A signed int can store both positive and negative values. Unsigned integer values can only store non-negative values
+
+a=5;
+p = (char*)&a; in here it creates achar pointer to address of a gives to  p which points to the address of a
+
+without any brackets *& cancels each other
+	
+while(printf("%d", 5) < 4) it will be (1 < 4)
+
+while loop have a condition while(i < 4, 5) it is in the format of while(expression1, expression2), here it is seperated by a comma(,) operator, so the expression1 is evaluated first then expression2 is evaluted, though expression1 is failed, expression2 will execute until the expression2 becomes false. so it basiclly acts as or opretor b/w the conditions
+
+The condition (0, i < 4) is in the format (expression1, expression2), here expression1(0) goes false, though expression2 will get executed until expression2 is false.in there the expression 1 zrois delibrately taken as zero
+
+The while loop have a condition (i < 3, i = 0, i < 5) is in a format (expression1, expression2, expression3). In each interation the compiler checks each expression. In this program, the loop will be:
+Iteration 1: 0 < 3, 0, 0 < 5
+Iteration 2: 1 < 3, 0, 0 < 5
+Iteration 3: 1 < 3, 0, 0 < 5
+Iteration 4: 1 < 3, 0, 0 < 5
+the loop continues as infinite because i is intialized to 0 each time.the value of i increases only in the next line and not the even in theprevious incremnt status
+
+
+Compilation Error:
+while(i == 4--)
+We can't use pre or post increment operator with constants or Literal values. So it will raise an error at compile time
+
+while(printf("%d", 5) == 1 == i) in here te print statement prints hte 5 but the total execution value is 1 thus it goes into the loop
+
+sizeof(0) is 4 bytes becoz it is also an int,while(sizeof(0))->while(4)
+
+float ft = 7.57;
+if (ft == 5.0f) {
+    break;
+}
+it compiles and doesnt throw any compilation error
+
+f(0), here the condition is false.only in this condition if doesnt allow
+
+int i = 0, j = 1, k = 0;
+		if(++k, j, i++)
+			printf("%d %d %d", i, j, k);
+	return 0;                           
+in this programthe o/p is nothing becoz the expression 3 gives 0 thus it is taken for the entire if and doesnt allow inside thus if acts as AND operator b/w the conditions
+
+there is no true or false keyword in c
+
+char str[8] = "if block";
+	if(str == "if block")
+		printf("if block executed");
+	else
+		printf("else block executed");
+	return 0;
+the above program executes else part becoz the we created a char and when we compare it to the string it gives 0,though we given in as string it will be saved only as the character array
+
+
+char str[] = "\0";
+	if(printf("%s",str))
+the above if doesnt allow the execution inside it becoz theprint statment dint print anyhting thus gives 0 to the if
+
+if(!printf("")) gives 1
+
+if("May I Get in") return true
+
+float me = 5.25;
+double you = 5.25;
+if (me == you),in here though the data types as different but it makes equal thus value is notfies mainly		
+
+
+char ch = 65;
+	switch(ch) in here the switch takes it as asci of 65 which is a
+
+
+case 65:
+		printf("Integer 65");
+		break;
+		case 'A':
+		printf("Char 65");
+		break;
+in here both the case have same  value => 65 = A
+
+switch(ch, i),these types execute based on expresssion 2
+
+switch(2/3) the take will be like 1.5 to 1 becoz of unsigned integer 
+
+case N + 5: case label does not reduce to an integer constant gives compilation error
+
+in switch usecannot use string as a condition like case "first":
+
+int main(){
+char ch = '\0';
+switch(ch)
+{
+	case NULL:
+	printf("Empty \0");
+	break;
+	case ' ':
+	printf("Empty Empty");
+	break;
+	case '0':
+	printf("Empty 0");
+	break;
+	default:
+	printf("Nothing");
+}
+
+prints case NULL
+
+#include<stdio.h>
+int main()
+{
+switch(25)
+{
+	case 25L:
+	printf("25L");
+	break;
+	case 25.0:
+	printf("25.0");
+	break;
+	default:
+	printf("Nothing");
+	break;
+}
+return 0;
+} throws error becoz it expects integer constant and not float or 25Long
+
+int a = 130;
+	char *ptr;
+	ptr = (char *)&a;
+	printf("%d ",*ptr);
+prints -126
+Here a variable a holds the value 130 of integer datatypes, which is then type casted to char datatypes using pointer variable. As we know that a value 130 is exceeding the char range( -128 to 127), thus it loops through its range.
+
+k=garbage value;
+printf("%d",*k); gives error some garbage value 
+
+IF THE ABOVE HAPPENDS FOR THE SME Condition where we have double pointer like
+int i = 3;
+	int *j;
+	int **k;
+	j = &i;
+	k = &j;
+	k++;
+	printf("%d ",**k);
+gives run time error beco we are using garbage value twice to fid the answer
+
+char *ptr = "hello";
+	char a[22];
+	*ptr = "world";
+	printf("\n%s %s",ptr, a);
+ptr is a pointer variable of character data type, string "world" can be set to the pointer variable ptr only at the initializing time.
+
+char *ptr = "helloworld";
+	printf(ptr + 4);
+O/P: oworld
+
+char a = 30, b = 5;
+	char *p = &a, *q = &b;
+	printf("%d", p - q);
+Difference between any two variables of same data type are always one.
+
+register a = 1;
+	int far *ptr;
+	ptr = &a;
+	printf("%u",ptr);
+"a" is a register variable which holds a value 1. It must be noted that variable a hold its value 1 in a register but not in computer memory location thus the pointer variable ptr cannot hold the address of a.
+
+The code ptr = (int *)&cr; creates a pointer ptr of type int* and attempts to store the address of the variable cr in it
+
+int *ptr = 2;
+ptr is the pointer variable of integer data type. Thus ptr can not be initialised by any integer value other than 0.
+
+char loop will be like after 128,129=-128,130=-127 ....

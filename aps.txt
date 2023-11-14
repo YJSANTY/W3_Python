@@ -1,0 +1,175 @@
+For a number N, whose prime factorization is Xa × Yb, we get the total number of factors by adding 1 to each exponent and then multiplying these together.
+
+To find the remainder when 4^24 is divided by 5, 
+Start by finding the remainders of successive powers of 4 when divided by 5:
+4^1 % 5 = 4
+4^2 % 5 = 16 % 5 = 1
+4^3 % 5 = 64 % 5 = 4
+4^4 % 5 = 256 % 5 = 1
+You'll notice that the remainders of 4^n alternate between 1 and 4. Specifically, when n is even, the remainder is 1, and when n is odd, the remainder is 4.
+
+Sum of first n numbers = n(n+1)/2
+
+0.0255 = 255/10000  = 51/2000
+
+Let numbers are 1x and 4x
+
+LCM = 4x​
+ 
+725^2/3 = 3^(6*(2/3)) = 3^4 = 81
+
+avg of first n numbers is (n+1)/2
+
+avg of square of first n numbers is (n+1)*(2n+1)/6x
+
+
+
+
+
+
+
+
+
+
+
+10 m/s * 3.6 km/hr/m/s = 36 km/hr
+
+So, 10 meters per second is equivalent to 36 kilometers per hour.
+
+Explanation - Due to stoppages, it covers 15 km less.
+
+Time taken to cover 15 km = (15/40) * 60 min = 10min
+
+During a trip of 400 km, an airplane was slowed down due to the monsoon. Its average speed for the trip was reduced by 150 km/hr and the time of the airplane increased by 30 minutes. The duration of the airplane is :
+
+
+A car can travel 30% faster than a bus. Car and bus both start from point P at the same time and reach point Q 55 kms away from P at the same time. On the way, however, the car lost about 9.5 minutes while stopping at the traffic. The speed of the bus is : 
+
+when it comes to finding the percentage just take the base requirements as 100 itself
+
+profit % = (S.P - C.P/C.P)*100
+
+gain % = ((100+common gain)^2-100^2)%/100
+
+loss %= ( - S.P + C.P/C.P)*100
+
+S.I - total returns  = principle + simple intrest,Simple intrest = Principlle*time*rate/100
+
+C.I - total returns = principle(1+r/100)^n,where r is in %
+ 
+If Diff. between SI & CI for 2 years is Rs. x, then Principal = x (100/r)^2,only C.I without P that is p(r/100)^t
+
+S.I = Actual - principle, here the sum represents the actual
+
+if you have consecutive years of S.I then find the difference betwen them like E.G: 4 th year and 5 th year
+
+to find the next term in a proportion series just find the mutiple between them or the difference b/w and use it to find the third or the next one
+
+total number of possiblities is n!
+
+if repetetion is allowed then possiblities is 4*4*4*4 for 4 numbers or alphabets
+
+if repetetion is not allowed then possiblities is 1*2*3*4 for 4 number or alphabets
+
+// Q what will be the total number of matches in a Particular series in which there are 15 teams and each team plays only one Match with others?
+
+The answer is 15C2
+
+the reason y it is combination and not perumtation is :
+
+a team can play only with other teams and cant play against itself thus repetition is not allowed and thus permutation is not allowed
+
+// Q find the total number of four-digit numbers which are divisible by 5 that can be formed with the digits 5, 7, 3, 2, and 1 If the Repetition of digits is allowed?
+
+Here the repetetion is allowed thus 5*5*5*1 the last position is reserved only for 5 becoz it should be divivsible by 5
+
+// Q In “MOTIHHARI” M appears 1 time, R 1 time, O 1 time,  T 1 time,  H 2 times, A 1 time, I 2 times 
+
+thus answer is 9!/2!*2! , 2! represents the  repetetion of I and H
+
+
+permutation - there are 3! = 3 x 2 x 1 = 6 different permutations of arranging two books. These permutations are: {A, B}, {A, C}, {B, A}, {B, C}, {C, A}, and {C, B}. order doesnt matters and repetetion is allowed when switching the places
+
+combination - So, there are 3 different combinations of books you can choose to read: {A, B}, {A, C}, and {B, C}. orders matters and repetetion in switching is allowed
+
+In “MOTIHARI” M appears 1 time, R 1 time, O 1 time,  T 1 time,  H 1 time, A 1 time, I 2 times therefore:
+possiblities is 8!/2!
+
+How many three-digit even Numbers can be formed using digits 2, 8, 9, 6, and 1 such that repetition is allowed?  Possible even Numbers = 5×5×3=75,where 3 represents that the even numbers alone come in that position.
+
+chosen or arrranged - combination like n! becoz arranged means so character cant be repeated 
+
+without order - permutation then it is n*n*n*n*n , hte char can be repeated n no of times
+
+// Q the central government of India to form a committee of 14 persons to be formed from 10 men and 8 women for a special investigation. In how many ways can this be done Such that 6 women are always present?  
+
+the answer is 10C8 * 8C6 , the reason y it is multipliedd becoz after selecting formt he grp again men vs women combination occurs 
+
+// Q 6 Ola scooters and 7 Anther scooters be arranged in a row so that no two Ola scooters are together? 
+
+in here the answer is 8P6(8 posiitons and 6 ola scooters) * 7P7(7 positions 7 anther scooters), here all ola scooters are same thus repetetion is allowed or placing any ola scooter anywhere means the same
+
+// Q Find the number of ways in which 10 different books can be arranged on a shelf so that 2 particular books are never together. 
+
+Number of ways two particular books are together = Total number of arrangements - arrangements where the particular books are together. 
+
+Total number of ways 10 books can be arranged : 10! Ways
+
+Ways of arranging books where two particular books are together: 9!×2!
+
+P(A intersection B) = P(A) + P(B)
+
+P(union) = P(A) + P(B) + P(A intersection B)
+
+Therefore, the required number of ways = 10! - (9! * 2!),(9! * 2!) this represents that the last two postions are occured for tat particular books 
+
+Relative speed of train where man and train same direction =>R(S) = T(S) + M(S),if opposite then R(S) = T(S) - M(S)
+
+length of train = distance ,speed = speed, time = passing a pole or something(reference)
+
+crossing bridge = length of bridge + length of train
+
+train cross a platform includes (platform length + length of train)
+
+same side then add the relative speed = S(T) +S(M),Distance = ahead_Dis / length(A) + length(B),find the time
+
+opposite side then add the relative speed = S(T) -S(M), Distance = ahead_Dis / length(A) + length(B),find the time
+
+Father is twice the age of son
+
+x = 2y at that time , thus need to be carefull with it
+
+When you find age you will be actual finding age for the reference time frame and not the present time thus be carefull
+
+After 8 years, he would be two and a half times of Ronit's age.
+
+x + 8 = 2.5(2y + 8)
+
+UP(S) = S(B) + S(R)
+
+DN(S) = S(B) - S(R)
+
+D/S(UP) - D/S(DN) = T.T
+
+After 
+
+G.p :
+
+Tn = a*r^n-1
+
+Sn = a(r^n-1)/r-1 where r>1
+
+Sn = a(1-r^n)/1-r where r<1
+
+s(infinte) = a/r-1
+
+	     A		 B
+W	LCM(S(A)   &	S(B))  , Work will be same for both 
+S
+T
+
+It is same for the Distance speed and time
+
+Sometimes D/S2 - D/S1 = T2- T1 (Difference)
+
+Odd One Out : prime,composite nummber,square,Cube,DIfference-sum-product b/w the digits, square + x, Cube + x,alternative series, diference-sum-product b/w previous numbers,difference of difference b/w numbers
